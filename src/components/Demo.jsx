@@ -6,7 +6,7 @@ import { useLazyGetSummaryQuery } from "../services/article";
 
 const Demo = () => {
   const [article, setArticle] = useState({
-    url: "",
+    url: "" ,
     summary: "",
   });
   const [allArticles, setAllArticles] = useState([]);
@@ -42,6 +42,7 @@ const Demo = () => {
 
       // update state and local storage
       setArticle(newArticle);
+      console.log(newArticle)
       setAllArticles(updatedAllArticles);
       localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
     }
